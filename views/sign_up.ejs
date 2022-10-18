@@ -1,8 +1,37 @@
 <%-include('_header')-%>
-<form action="/users/create" method="post">
-    <input type="text" name="name" placeholder="Name">
-    <input type="email" name = "email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
-    <input type="password" name="cPassword" placeholder="Confirm Password">
-    <input type = "submit" value="Sign In">
-</form>
+
+
+
+<body style="background-image: url('/images/background.jpeg') ;">
+
+    <form action="/users/create" method="post">
+
+        <div class="form-group m-4">
+            <label for="name">Full Name</label>
+            <input type="name" class="form-control" name = "name" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
+            
+          </div>
+
+        <div class="form-group m-4">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" name = "email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group m-4">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name = "password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+
+        <div class="form-group m-4">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control" name = "cPassword" id="exampleInputPassword1" placeholder="Confirm Password">
+          </div>
+
+
+        <button type="submit" class="btn btn-primary" style="margin-left: 2vw ;">Submit</button>
+      </form>
+
+
+</body>
+

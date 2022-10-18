@@ -1,8 +1,35 @@
+<head>
 
+    <style>
+        input{
+            display: block ;
+            margin: 20px ;
+
+        }
+    </style>
+    
+
+</head>
 <%- include('_header')-%>
 
-<form action="/users/createSession" method="post">
-    <input type="email" name = "email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
-    <input type = "submit" value="Sign In">
-</form>
+<!--  background-image: url('/images/background.jpeg' ); -->
+
+<body style="background-image: url('/images/background.jpeg') ;">
+
+    <form action = "/users/createSession" method="post">
+        <div class="form-group m-4">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" name = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group m-4">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name = "password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="margin-left:2vw;">Submit</button>
+      </form>
+    
+
+</body>
+

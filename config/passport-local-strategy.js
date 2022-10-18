@@ -11,7 +11,7 @@ passport.use( new LocalStrategy({
     function( email , password , done ){
         User.findOne({ email : email } , function( err , user ){
 
-            if( err ){ console.log('Error in findin user --> Passport ' ) ; return done( err ) ; }
+            if( err ){ console.log('Error in finding user --> Passport ' ) ; return done( err ) ; }
 
             if( !user || user.password != password ){
                 console.log('Invalid Username / Password' ) ;
@@ -37,10 +37,7 @@ passport.deserializeUser( function( id , done ){
     })
 })
 passport.checkAuthentication = function( req , res , next ){
-   /* if( req.isAuthenticated() ){
-        return next() ;
-    }
-    */
+   
    if( req.isAuthenticated() ){
         return next() ;
    }

@@ -10,6 +10,14 @@ module.exports.add = function( req , res ){
     
     return res.redirect('/') ;
 }
-module.exports.remove = function(req , res ){
+module.exports.delete = async function(req , res ){
 
+    console.log( req.params.id )
+
+    let todo = await Todo.findById( req.params.id ) ;
+    
+    if( todo )todo.remove()
+    else { console.log('Todo not found') ; }
+
+    res.redirect('back') ;
 }
