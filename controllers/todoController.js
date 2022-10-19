@@ -1,5 +1,5 @@
 const Todo = require('../models/todo') ;
-
+// Module to add a to do
 module.exports.add = function( req , res ){
     
     Todo.create( req.body , function( err , todo ){
@@ -10,6 +10,7 @@ module.exports.add = function( req , res ){
     
     return res.redirect('/') ;
 }
+// Module to delete a todo
 module.exports.delete = async function(req , res ){
 
     console.log( req.params.id )

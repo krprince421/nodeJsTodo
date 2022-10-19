@@ -1,3 +1,4 @@
+// Schema for storing all the user information
 const mongoose = require('mongoose') ;
 const userSchema = {
     email : {

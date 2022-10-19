@@ -1,3 +1,4 @@
+//Schema for storing all to do information
 const mongoose = require('mongoose') ;
 
 const todoSchema = new mongoose.Schema({
