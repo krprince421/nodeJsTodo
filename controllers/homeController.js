@@ -21,14 +21,18 @@ module.exports.home = async function( req , res ){
                 todos : todos
             })
         })
-        return ;
+
+    }
+    else{
+        res.render('home') ;
     }
     
     //console.log( "id : ",  req.user._id ) ;
-    Todo.find({}).populate('user').exec( function( err , todos){
+    /*Todo.find({}).populate('user').exec( function( err , todos){
         return res.render('home' , {
             todos : todos
         })
     })
+    */
 
 }

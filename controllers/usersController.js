@@ -42,12 +42,10 @@ module.exports.create = function( req , res ){
 
 module.exports.signIn = function( req , res ){
     
-
     if( req.isAuthenticated() ){
         return res.redirect('/') ;
     }
     return res.render('sign_in') ;
-
 }
 
 module.exports.signUp = function( req , res ){

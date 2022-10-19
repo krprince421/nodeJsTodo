@@ -20,12 +20,18 @@
           <li class="nav-item active">
             <a class="nav-link" href="/">Home</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/users/sign-in">Sign In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/users/sign-up">Sign Up</a>
-          </li>
+
+          <% if( !locals.user ){ %>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/sign-in">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/sign-up">Sign Up</a>
+              </li>
+
+          <% }else{ %>
+          
+          
           <li class="nav-item">
             <a class="nav-link" href="/users/profile">Profile</a>
           </li>
@@ -33,6 +39,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/users/sign-out">Sign Out</a>
           </li>
+          <% } %>
 
           <% if( locals.user ){ %>
             <div style="margin-right: auto ;"></div>
